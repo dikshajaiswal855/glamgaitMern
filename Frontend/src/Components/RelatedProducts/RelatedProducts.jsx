@@ -6,7 +6,7 @@ function RelatedProducts({theme}) {
   const [popularProd, setPopularProd] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/popularitms')
+    fetch('https://glamgaitmern-backend.onrender.com/popularitms')
       .then((response) => response.json())
       .then((data) => setPopularProd(data));
   }, []);
