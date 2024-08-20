@@ -89,3 +89,4 @@ function AddProduct() {
 //  w-[350px] mx-10 my-2 md:w-[600px] md:mx-20 md:my-10 justify-center items-center
 
 export default AddProduct
+

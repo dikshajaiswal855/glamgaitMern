@@ -5,7 +5,7 @@ const Popular = ({ theme }) => {
   const [popularProd, setPopularProd] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/popularitms')
+    fetch('https://glamgaitmern-backend.onrender.com/popularitms')
       .then((response) => response.json())
       .then((data) => setPopularProd(data));
   }, []);
@@ -16,7 +16,7 @@ const Popular = ({ theme }) => {
         <h1 className="font-bold text-2xl md:text-4xl text-center">TRENDING FOOTWEAR</h1>
         <div className={`w-36 h-1 border-b-4 ${theme === 'light' ? 'border-teal-300' : 'border-teal-500'} mt-2 mb-7 md:mt-4`}></div>
       </div>
-      <div className="popular_item w-full flex flex-wrap justify-evenly">
+      <div className="popular_item px-2 md:px-16 w-full flex flex-wrap justify-evenly">
         {popularProd.map((item) => (
           <Item
             key={item.id}
