@@ -25,7 +25,7 @@ function AddProduct() {
         let formData= new FormData();
         formData.append('product',image);
 
-        await fetch('http://localhost:4000/upload',{
+        await fetch('https://glamgaitmern-backend.onrender.com/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -36,7 +36,7 @@ function AddProduct() {
         if(responseData.success){
             product.image=responseData.image_url;
             console.log(product); 
-            await fetch('http://localhost:4000/addproduct',{
+            await fetch('https://glamgaitmern-backend.onrender.com/addproduct',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',
@@ -89,4 +89,3 @@ function AddProduct() {
 //  w-[350px] mx-10 my-2 md:w-[600px] md:mx-20 md:my-10 justify-center items-center
 
 export default AddProduct
-
